@@ -1,0 +1,13 @@
+---
+title: Stars
+---
+<h1>Stars</h1>
+
+<ul>
+  {% for star in site.data.stars %}
+    <li>
+      <h2><a href="{{ star.link }}">{{ star.title }}</a></h2>
+      <p>{{ star.description }}</p>
+    </li>
+  {% endfor %}
+</ul>
