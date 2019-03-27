@@ -1,3 +1,8 @@
+title: Alexander Huang's Blog
+author: Alexander Huang
+
+permalink: /:year/:month/:day/:title.html
+
 collections:
   authors:
     output: true
