@@ -6,7 +6,7 @@ permalink: /:year/:month/:day/:title.html
 
 collections:
   authors:
-    output: true
+    output: false
 
 defaults:
   - scope:
