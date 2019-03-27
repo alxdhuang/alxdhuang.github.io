@@ -1,5 +1,6 @@
 title: Alexander Huang's Blog
 author: Alexander Huang
+url: https://alxdhuang.github.io
 
 permalink: /:year/:month/:day/:title.html
 
@@ -22,3 +23,8 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-seo-tag
