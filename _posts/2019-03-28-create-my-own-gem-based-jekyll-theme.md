@@ -1,5 +1,6 @@
 ---
 title: Create My Own Gem-based Jekyll Theme
+date: 2019-03-28 12:26:28 +0800
 categories: [Notes]
 tags: [jekyll, blog, ruby]
 ---
@@ -14,3 +15,15 @@ I have forked the minima, and renamed it to [minima-rock](https://github.com/alx
 gem build minima-rock.gemspec
 gem push minima-rock-VERSION.gem
 ```
+
+## Using
+
+1. Add `gem 'jekyll-remote-theme'` in the `Gemfile`.
+2. Specify below in the `_config.yml`.
+
+    ```yml
+    plugins:
+      - jekyll-remote-theme
+    
+    remote_theme: alxdhuang/minima-rock
+    ```
