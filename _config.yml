@@ -32,3 +32,5 @@ plugins:
   - jekyll-seo-tag
 
 remote_theme: alxdhuang/minima-rock
+
+google_analytics: true
