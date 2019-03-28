@@ -1,12 +1,3 @@
 ---
-title: Alexander Huang's Blog
+layout: home
 ---
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <time>{{ post.date | date_to_string }}</time>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
