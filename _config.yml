@@ -1,6 +1,9 @@
 title: Alexander Huang's Blog
 author: Alexander Huang
+email: alxdhuang@gmail.com
 url: https://alxdhuang.github.io
+
+show_excerpts: true
 
 permalink: /:year/:month/:day/:title.html
 
