@@ -34,3 +34,6 @@ plugins:
 remote_theme: alxdhuang/minima-rock
 
 google_analytics: true
+
+kramdown:
+  parse_block_html: true
