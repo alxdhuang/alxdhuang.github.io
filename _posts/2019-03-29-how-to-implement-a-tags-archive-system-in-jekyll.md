@@ -1,5 +1,6 @@
 ---
 title: How to Implement a Tags Archive System in Jekyll
+date: 2019-03-29 11:23:25 +0800
 categories: [Notes]
 tags: [jekyll, tags]
 ---
@@ -17,7 +18,7 @@ This post introduces how do I implement a tags archive system in [Jekyll](https:
         {% assign tags = page.tags | sort %}
         {% for tag in tags %}
         <span class="site-tag">
-            <a class="site-tag-text" href="/tags/{{ tag | slugify }}.html">{{ tag | replace:'-', ' ' }}</a>
+            <a class="site-tag-text" href="{{ site.baseurl }}/tags/{{ tag | slugify }}.html">{{ tag | replace:'-', ' ' }}</a>
         </span>
         {% endfor %}
     </div>
@@ -43,6 +44,8 @@ This post introduces how do I implement a tags archive system in [Jekyll](https:
     </script>
     {% endraw %}
     ```
+
+    At last, insert `<script type="text/javascript" src="{{ site.baseurl }}/assets/js/color.js"></script>` into the `<head>`.
 
 ## Creating Tags Archive Pages
 
@@ -86,3 +89,38 @@ This post introduces how do I implement a tags archive system in [Jekyll](https:
 
 3. (*Optional*) Creating an archive page manually for every tag is so tired. So I have created a Python script [`gen_tags.py`](https://github.com/alxdhuang/minima-rock/blob/master/script/gen_tags.py) to automatically generate archive pages. You can copy it into your repository and run it before every time you publish your posts.
 
+## Creating Tags Cloud
+
+1. Create a template `_includes/tags_cloud.html`. It is very alike `tags_bar.html`, except that the font size of tags is determined by the number of posts that use them.
+
+    ```html
+    {% raw %}
+    <p class="tag-cloud">
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+    <span class="site-tag">
+    <a class="site-tag-text" href="{{ site.baseurl }}/tags/{{ tag | first | slugify }}.html" style="font-size: {{ tag | last | size | times: 4 | plus: 80 }}%;">
+        {{ tag[0] | replace:'-', ' ' }}
+    </a>
+    </span>
+    {% endfor %}
+    </p>
+
+    <script type="text/javascript">
+        setInvertedColor('site-tag-text');
+    </script>
+    {% endraw %}
+    ```
+
+2. Create a tags cloud page `tags.md`.
+
+    ```
+    {% raw %}
+    ---
+    layout: page
+    title: Tags
+    ---
+
+    {% include tags_cloud.html %}
+    {% endraw %}
+    ```
