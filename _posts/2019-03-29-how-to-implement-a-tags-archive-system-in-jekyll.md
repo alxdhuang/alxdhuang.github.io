@@ -1,6 +1,7 @@
 ---
 title: How to Implement a Tags Archive System in Jekyll
 date: 2019-03-29 11:23:25 +0800
+modified_date: 2019-03-29 12:38:00 +0800
 categories: [Notes]
 tags: [jekyll, tags]
 ---
@@ -87,7 +88,7 @@ This post introduces how do I implement a tags archive system in [Jekyll](https:
 
     Then, every tag `TAG` has an archive page with a url `/tags/TAG.html`.
 
-3. (*Optional*) Creating an archive page manually for every tag is so tired. So I have created a Python script [`gen_tags.py`](https://github.com/alxdhuang/minima-rock/blob/master/script/gen_tags.py) to automatically generate archive pages. You can copy it into your repository and run it before every time you publish your posts.
+3. (*Optional*) Creating an archive page manually for every tag is so tired. So I have created a Python script [`archive.py`](https://github.com/alxdhuang/minima-rock/blob/master/script/archive.py) to automatically generate archive pages. You can copy it into your repository and run it before every time you publish your posts.
 
 ## Creating Tags Cloud
 
