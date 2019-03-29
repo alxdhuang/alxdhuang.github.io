@@ -2,6 +2,8 @@
   link: /
 - name: About
   link: /about
+- name: Categories
+  link: /categories
 - name: Tags
   link: /tags
 - name: Stars
