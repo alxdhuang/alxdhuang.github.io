@@ -9,10 +9,6 @@ Here are some notes of [*Pro Git*, 2nd Edition](https://git-scm.com/book/en/v2) 
 
 {% include toc.html %}
 
-## 1. Getting Started
-
-### 1.1 About Version Control
-
 What is *version control*?
 
 > Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
