@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Annotations to Pro Git, 2nd Edition"
-categories: Annotations
+title: "Notes of Pro Git, 2nd Edition"
+categories: Notes
 tags: git
 ---
 
-Here are some annotations to [*Pro Git*, 2nd Edition](https://git-scm.com/book/en/v2) written by Scott Chacon and Ben Straub.
+Here are some notes of [*Pro Git*, 2nd Edition](https://git-scm.com/book/en/v2) written by Scott Chacon and Ben Straub.
 
 {% include toc.html %}
 

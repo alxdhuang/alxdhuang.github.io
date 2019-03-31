@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Annotations to The Ruby Programming Language by David Flanagan and Yukihiro Matsumoto"
-categories: Annotations
+title: "Notes of The Ruby Programming Language by David Flanagan and Yukihiro Matsumoto"
+categories: Notes
 tags: ruby
 ---
 
-Here are annotations to [*The Ruby Programming Language*](http://shop.oreilly.com/product/9780596516178.do) written by David Flanagan and Yukihiro Matsumoto.
+Here are notes of [*The Ruby Programming Language*](http://shop.oreilly.com/product/9780596516178.do) written by David Flanagan and Yukihiro Matsumoto.
 
 {% include toc.html %}
 
