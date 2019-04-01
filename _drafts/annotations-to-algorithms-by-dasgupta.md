@@ -1,0 +1,130 @@
+---
+layout: post
+title: "Annotations to Algorithms by Dasgupta"
+categories: Annotations
+tags: algorithms
+math: true
+---
+
+Annotations to [*Algorithms*](https://www.amazon.com/dp/0073523402) by Sanjoy Dasgupta, Christos H. Papadimitriou and Umesh Vazirani (2006).
+
+{% include toc.html %}
+
+## Chapter 0. Prologue
+
+### 0.1 Books and algorithms
+### 0.2 Enter Fibonacci
+
+| n     | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7  | ... |
+| $F_n$ | 0 | 1 | 1 | 2 | 3 | 5 | 8 | 13 | ... |
+
+The Fibonacci numbers grow *almost* as fast as the powers of 2: $F_n \approx 2^{0.694n}$.
+
+$$
+F_n < 2F_{n-1} < 2^{2}F_{n-2} < \cdots < 2^{n-2}F_{2} = 2^{n-2}
+$$
+
+$$
+F_n > 2F_{n-2} > 2^{2}F_{n-4} > \cdots
+$$
+
+If $n$ is even, let $n=2k$,
+
+$$
+F_{2k} > 2F_{2(k-1)} > 2^{2}F_{2(k-2)} > \cdots > 2^{k-1}F_{2} = 2^{k-1} = 2^{0.5n-1}
+$$
+
+If $n$ is odd, let $n=2k-1$,
+
+$$
+F_{2k-1} > 2F_{2k-3} > 2^{2}F_{2(k-1)-3} > \cdots > 2^{k-2}F_{3} = 2^{k-1} = 2^{0.5n-0.5}
+$$
+
+### 0.3 Big-O notation
+
+## Chapter 1. Algorithms with numbers
+
+### 1.1 Basic arithmetic
+### 1.2 Modular arithmetic
+### 1.3 Primality testing
+### 1.4 Cryptography
+### 1.5 Universal hashing
+
+## Randomized algorithms: a virtual chapter
+
+## Chapter 2. Divide-and-conquer algorithms
+
+### 2.1 Multiplication
+### 2.2 Recurrence relations
+### 2.3 Mergesort
+### 2.4 Medians
+### 2.5 Matrix multiplication
+### 2.6 The fast Fourier transform
+
+## Chapter 3. Decompositions of Graphs
+
+### 3.1 Why graphs?
+### 3.2 Depth-first search in undirected graphs
+### 3.3 Depth-first search in directed graphs
+### 3.4 Strongly connected components
+
+## Chapter 4. Paths in graphs
+
+### 4.1 Distances
+### 4.2 Breadth-first search
+### 4.3 Lengths on edges
+### 4.4 Dijkstra's algorithm
+### 4.5 Priority queue implementations
+### 4.6 Shortest paths in the presence of negative edges
+### 4.7 Shortest paths in dags
+
+## Chapter 5. Greedy algorithms
+
+### 5.1 Minimum spanning trees
+### 5.2 Huffman encoding
+### 5.3 Horn fomulas
+### 5.4 Set cover
+
+## Chapter 6. Dynamic programming
+
+### 6.1 Shortest paths in dags, revisited
+### 6.2 Longest increasing subsequences
+### 6.3 Edit distance
+### 6.4 Knapsack
+### 6.5 Chain matrix multiplication
+### 6.6 Shortest paths
+### 6.7 Independent sets in trees
+
+## Chapter 7. Linear programming and reductions
+
+### 7.1 An introduction to linear programming
+### 7.2 Flows in networks
+### 7.3 Bipartite matching
+### 7.4 Duality
+### 7.5 Zero-sum games
+### 7.6 The simplex algorithm
+### 7.7 Postscript: circuit evaluation
+
+## Chapter 8. NP-complete problems
+
+### 8.1 Search problems
+### 8.2 NP-complete problems
+### 8.3 The reductions
+
+## Chapter 9. Coping with NP-completeness
+
+### 9.1 Intelligent exhaustive search
+### 9.2 Approximation algorithms
+### 9.3 Local search heuristics
+
+## Chapter 10. Quantum algorithms
+
+### 10.1 Qubits, superposition, and measurement
+### 10.2 The plan
+### 10.3 The quantum fourier transform
+### 10.4 Periodicity
+### 10.5 Quantum circuits
+### 10.6 Factoring as periodicity
+### 10.7 The quantum algorithm for factoring
+
+## Exercises
