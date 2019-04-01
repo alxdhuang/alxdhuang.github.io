@@ -20,24 +20,28 @@ Annotations to [*Algorithms*](https://www.amazon.com/dp/0073523402) by Sanjoy Da
 
 The Fibonacci numbers grow *almost* as fast as the powers of 2: $F_n \approx 2^{0.694n}$.
 
+No need exact and rigorous calculation, we could see that $2^{0.5n} < F_n < 2^{n}$ for $n \geq 3$.
+
+Proof: for $n \geq 3$, we have $F_n > F_{n-1}$ and $F_n = F_{n-1} + F_{n-2}$, then
+
 $$
-F_n < 2F_{n-1} < 2^{2}F_{n-2} < \cdots < 2^{n-2}F_{2} = 2^{n-2}
+F_n < 2F_{n-1} < 2^{2}F_{n-2} < 2^{3}F_{n-3} < \cdots < 2^{n-2}F_{2} = 2^{n-2} < 2^n
 $$
 
 $$
-F_n > 2F_{n-2} > 2^{2}F_{n-4} > \cdots
+F_n > 2F_{n-2} > 2^{2}F_{n-4} > 2^{3}F_{n-6} > \cdots
 $$
 
-If $n$ is even, let $n=2k$,
+If $n$ is even, 
 
 $$
-F_{2k} > 2F_{2(k-1)} > 2^{2}F_{2(k-2)} > \cdots > 2^{k-1}F_{2} = 2^{k-1} = 2^{0.5n-1}
+F_n > \cdots > 2^{0.5n-1}F_{2} = 2^{0.5n-1} > 2^{0.5n}
 $$
 
-If $n$ is odd, let $n=2k-1$,
+If $n$ is odd,
 
 $$
-F_{2k-1} > 2F_{2k-3} > 2^{2}F_{2(k-1)-3} > \cdots > 2^{k-2}F_{3} = 2^{k-1} = 2^{0.5n-0.5}
+F_n > \cdots > 2^{0.5n-1.5}F_{3} = 2^{0.5n-0.5} > 2^{0.5n}
 $$
 
 ### 0.3 Big-O notation
