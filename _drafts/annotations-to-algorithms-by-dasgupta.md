@@ -142,3 +142,17 @@ More notations:
 ### 10.7 The quantum algorithm for factoring
 
 ## Exercises
+
+> 0.2. Show that, if $c$ is a positive real number, then $g(n)=1+c+c^2+\cdots+c^n$ is:
+>
+> (a) $\Theta(1)$ if $c < 1$.  
+> (b) $\Theta(n)$ if $c = 1$.  
+> (c) $\Theta(c^n)$ if $c > 1$.
+>
+> The moral: in big-$\Theta$ terms, the sum of a geometric series is simply the first term if the series is strictly decreasing, the last term if the series is strictly increasing, or the number of terms if the series is unchanging.
+
+If $c = 1$, $g(n)=n$. (b) is true. 
+
+If $c < 1$, $g(n)=1 + c \frac{1-c^{n}}{1-c}$. Because $0 < c \frac{1-c^{n}}{1-c} < \frac{c}{1-c}$, we have $1 < g(n) < \frac{1}{1-c}$. (a) is true.
+
+If $c > 1$, $g(n)=c^n + \frac{c^{n}-1}{c-1}$. Because $c^{n-1} < \frac{c^{n}-1}{c-1} < \frac{c^{n}}{c-1}$, we have $\frac{1+c}{c}c^n < g(n) < \frac{c}{c-1}c^n$. (c) is true.
