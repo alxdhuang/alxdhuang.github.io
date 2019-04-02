@@ -20,7 +20,7 @@ Annotations to [*Algorithms*](https://www.amazon.com/dp/0073523402) by Sanjoy Da
 
 The Fibonacci numbers grow *almost* as fast as the powers of 2: $F_n \approx 2^{0.694n}$.
 
-No need exact and rigorous calculation, we could see that $2^{0.5n} < F_n < 2^{n}$ for $n \geq 6$.
+No need exact and rigorous calculation, we could see that $2^{0.5n} \leq F_n < 2^{n}$ for $n \geq 6$.
 
 Proof: for $n \geq 6$, we have $F_n > F_{n-1}$ and $F_n = F_{n-1} + F_{n-2}$, then
 
@@ -37,6 +37,8 @@ If $n$ is even,
 $$
 F_n > \cdots > 2^{0.5n-3}F_{6} = 2^{0.5n}
 $$
+
+(**Be careful!** When $n=6$, the equality holds.)
 
 If $n$ is odd,
 
@@ -156,3 +158,29 @@ If $c = 1$, $g(n)=n$. (b) is true.
 If $c < 1$, $g(n)=1 + c \frac{1-c^{n}}{1-c}$. Because $0 < c \frac{1-c^{n}}{1-c} < \frac{c}{1-c}$, we have $1 < g(n) < \frac{1}{1-c}$. (a) is true.
 
 If $c > 1$, $g(n)=c^n + \frac{c^{n}-1}{c-1}$. Because $c^{n-1} < \frac{c^{n}-1}{c-1} < \frac{c^{n}}{c-1}$, we have $\frac{1+c}{c}c^n < g(n) < \frac{c}{c-1}c^n$. (c) is true.
+
+> 0.3. The Fibonacci numbers $F_0,F_1,F_2,\cdots$ are defined by the rule
+>
+> $$
+> F_0=0,F_1=1,F_n = F_{n-1} + F_{n-2}
+> $$
+> 
+> In this problem we will confirm that this sequence grows exponentially fast and obtain some bounds on its growth.
+> 
+> (a) Use induction to prove that $F_n \geq 2^{0.5n}$ for $n\geq 6$.  
+> (b) Find a constant $c < 1$ such that $F_n \leq 2^{cn}$ for all $n \geq 0$. Show that your answer is correct.  
+> (c) What is the largest $c$ you can find for which $F_n = \Omega(2^{cn})$?  
+
+I have proved (a) and (b). See [0.2 Enter Fibonacci](#02-enter-fibonacci).
+
+(c)
+
+$$
+2^{cn}=2^{c(n-1)} + 2^{c(n-2)}
+$$
+
+$$
+2^{2c} - 2^{c} - 1 = 0
+$$
+
+Let $x = 2^{c}$, then we have $x^2 - x - 1 = 0$. The larger root is $\frac{1+\sqrt{5}}{2} \approx 1.618033988749895$. So the largest $c$ is $\log_2 \frac{1+\sqrt{5}}{2} \approx 0.6942419136306174$.
