@@ -46,6 +46,16 @@ $$
 
 ### 0.3 Big-O notation
 
+A concrete definition of Big-O:
+
+> Let $f(n)$ and $g(n)$ be functions from positive integers to positive reals. We say $f=O(g)$ (which means that "f grows no faster than g") if there is a constant $c > 0$ such that $f(n) \leq c g(n)$.
+
+More notations:
+
+> $f=\Omega(g)$ means $g=O(f)$
+> 
+> $f=\Theta(g)$ means $f=O(g)$ and $f=\Omega(g)$
+
 ## Chapter 1. Algorithms with numbers
 
 ### 1.1 Basic arithmetic
