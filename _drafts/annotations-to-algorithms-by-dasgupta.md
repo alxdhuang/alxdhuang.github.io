@@ -171,16 +171,20 @@ If $c > 1$, $g(n)=c^n + \frac{c^{n}-1}{c-1}$. Because $c^{n-1} < \frac{c^{n}-1}{
 > (b) Find a constant $c < 1$ such that $F_n \leq 2^{cn}$ for all $n \geq 0$. Show that your answer is correct.  
 > (c) What is the largest $c$ you can find for which $F_n = \Omega(2^{cn})$?  
 
-I have proved (a) and (b). See [0.2 Enter Fibonacci](#02-enter-fibonacci).
+(a) See [0.2 Enter Fibonacci](#02-enter-fibonacci).
 
-(c)
-
-$$
-2^{cn}=2^{c(n-1)} + 2^{c(n-2)}
-$$
+(b) Suppose $F_{n-1} \leq 2^{c(n-1)}$ and $F_{n-2} \leq 2^{c(n-2)}$, for that the mathematical induction works, it must obeys 
 
 $$
-2^{2c} - 2^{c} - 1 = 0
+2^{c(n-1)} + 2^{c(n-2)} \leq 2^{cn}
 $$
 
-Let $x = 2^{c}$, then we have $x^2 - x - 1 = 0$. The larger root is $\frac{1+\sqrt{5}}{2} \approx 1.618033988749895$. So the largest $c$ is $\log_2 \frac{1+\sqrt{5}}{2} \approx 0.6942419136306174$.
+i.e. 
+
+$$
+2^{2c} - 2^{c} - 1 \geq 0
+$$
+
+Let $x = 2^{c}$, then we have $x^2 - x - 1 \geq 0$. The solution is $x \geq \frac{1+\sqrt{5}}{2} \approx 1.618$, i.e. $c \geq \log_2 \frac{1+\sqrt{5}}{2} \approx 0.694$.
+
+(c) According to (b), we know that the largest $c$ is $\log_2 \frac{1+\sqrt{5}}{2}$.
