@@ -14,6 +14,10 @@ Annotations to [*High Performance JavaScript*](https://www.amazon.com/dp/0596802
 
 When a browser meet a `<script>` tag, it will stop the rendering and switch to download and execute the JavaScript code, because the code may dynamically modify the page. If you put scripts at the `<head>`, the page rendering progress may be blocked, so put all scripts as close to the bottom of the `<body>` tag as possible.
 
+> The current state-of-the-art is to put scripts in the `<head>` tag and use the `async` or `defer` attributes. This allows your scripts to be downloaded asap without blocking your browser.
+>
+> -- [Where should I put `<script>` tags in HTML markup? - StackOverflow](https://stackoverflow.com/a/24070373/11128302)
+
 ### Grouping Scripts
 ### Nonblocking Scripts
 #### Deferred Scripts
