@@ -11,6 +11,9 @@ Annotations to [*High Performance JavaScript*](https://www.amazon.com/dp/0596802
 
 ## 1. Loading and Execution
 ### Script Positioning
+
+When a browser meet a `<script>` tag, it will stop the rendering and switch to download and execute the JavaScript code, because the code may dynamically modify the page. If you put scripts at the `<head>`, the page rendering progress may be blocked, so put all scripts as close to the bottom of the `<body>` tag as possible.
+
 ### Grouping Scripts
 ### Nonblocking Scripts
 #### Deferred Scripts
