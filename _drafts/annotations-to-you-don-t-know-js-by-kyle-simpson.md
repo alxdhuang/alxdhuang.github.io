@@ -23,6 +23,27 @@ Annotations to [*You Don't Know JS (book series)*](https://github.com/getify/You
 > Where do those variables **live**?
 
 ### Chapter 2: Lexical Scope
+
+Lexical scopes are created at the lexing time. When you create a block, you introduce a scope. Lexical scopes form a list of scope-*chains* or scope-*stacks*.
+
+```
++---------+   +---------+   +---------+
+| scope 1 |-->| scope 2 |-->| scope 3 |
++---------+   +---------+   +---------+
++---------+   +---------+ 
+| scope 4 |-->| scope 5 |
++---------+   +---------+ 
++---------+   +---------+   +---------+   +---------+
+| scope 6 |-->| scope 7 |-->| scope 8 |-->| scope 9 |
++---------+   +---------+   +---------+   +---------+
++----------+
+| scope 10 |
++----------+
+...
+```
+
+When the engine looks up an identifier, it will at first find in the current scope, if it doesn't find out, it will look up in the outer scope, and so on, finally reach to the global scope.
+
 ### Chapter 3: Function vs. Block Scope
 ### Chapter 4: Hoisting
 ### Chapter 5: Scope Closures
