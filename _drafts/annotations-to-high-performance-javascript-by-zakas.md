@@ -19,6 +19,9 @@ When a browser meet a `<script>` tag, it will stop the rendering and switch to d
 > -- [Where should I put `<script>` tags in HTML markup? - StackOverflow](https://stackoverflow.com/a/24070373/11128302)
 
 ### Grouping Scripts
+
+> Each HTTP request brings with it additional performance overhead, so downloading onesingle 100 KB file will be faster than downloading four 25 KB files. To that end, it’s helpful to limit the number of external script files that your page references.
+
 ### Nonblocking Scripts
 #### Deferred Scripts
 #### Dynamic Script Elements
