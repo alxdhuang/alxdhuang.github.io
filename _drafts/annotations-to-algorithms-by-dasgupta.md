@@ -188,3 +188,112 @@ $$
 Let $x = 2^{c}$, then we have $x^2 - x - 1 \geq 0$. The solution is $x \geq \frac{1+\sqrt{5}}{2} \approx 1.618$, i.e. $c \geq \log_2 \frac{1+\sqrt{5}}{2} \approx 0.694$.
 
 (c) According to (b), we know that the largest $c$ is $\log_2 \frac{1+\sqrt{5}}{2}$.
+
+> 0.4. Is there a faster way to compute the `n`th Fibonacci number than by `fib2`(page 4)? One idea involves **matrices**.
+>
+> We start by writing the equations $F_1=F_1$ and $F_2=F_0+F_1$ in matrix notation:
+>
+> $$
+> \begin{pmatrix}
+> F_1 \\
+> F_2 \\
+> \end{pmatrix} = 
+> \begin{pmatrix}
+> 0 & 1 \\ 
+> 1 & 1
+> \end{pmatrix} \cdot
+> \begin{pmatrix}
+> F_0 \\
+> F_1 \\
+> \end{pmatrix}
+> $$
+>
+> Similarly, 
+>
+> $$
+> \begin{pmatrix}
+> F_2 \\
+> F_3 \\
+> \end{pmatrix} =
+> \begin{pmatrix}
+> 0 & 1 \\ 
+> 1 & 1
+> \end{pmatrix} \cdot
+> \begin{pmatrix}
+> F_1 \\
+> F_2 \\
+> \end{pmatrix} =
+> \begin{pmatrix}
+> 0 & 1 \\ 
+> 1 & 1
+> \end{pmatrix}^2 \cdot
+> \begin{pmatrix}
+> F_0 \\
+> F_1
+> \end{pmatrix}
+> $$
+>
+> and in general
+> 
+> $$
+> \begin{pmatrix}
+> F_n \\
+> F_{n+1} \\
+> \end{pmatrix} =
+> \begin{pmatrix}
+> 0 & 1 \\ 
+> 1 & 1
+> \end{pmatrix}^n \cdot
+> \begin{pmatrix}
+> F_0 \\
+> F_1
+> \end{pmatrix}
+> $$
+>
+> So, in order to compute $F_n$, it suffices to raise this $2\times2$ matrix, call it $X$, to the `n`th power.
+>
+> (a) Show that two $2\times2$ matrices can be multiplied using 4 additions and 8 multiplications.
+>
+> But how many matrix multiplications does it take to compute $X^n$?
+>
+> (b) Show that $O(\log n)$ matrix multiplications suffice for computing $X^n$. (Hint: Think about computing $X^8$.)
+>
+> Thus the number of arithmetic operations needed by our matrix-based algorithm, call it `fib3`, is just $O(\log n)$, as compared to $O(n)$ for `fib2`. Have we broken another exponential barrier?
+> 
+> **The catch is that our new algorithm involves multiplication, not just addition; and multiplications of large numbers are slower than additions.** We have already seen that, when the complexity of arithmetic operations is taken into account, the running time of `fib2` becomes $O(n^2)$.
+>
+> (c) Show that all intermediate results of `fib3` are $O(n)$ bits long.
+
+(a) This statement is easily proved by directly multiply the two matrices.
+
+(b) Suppose $T(X^n)$ is the times of matrix multiplication of computing $X^n$, and let $n=2^m + i$. Because $X^{2^m} = X^{2^{m-1}} \cdot X^{2^{m-1}}$, we have
+
+$$
+T(X^{2^m}) = T(X^{2^{m-1}}) + 1 = \cdots = T(X^{2}) + m-1 = m
+$$
+
+So that 
+
+$$
+T(X^n) = T(X^{2^m}) + T(X^i) = m + T(X^i)
+$$
+
+Because $i < 2^m$, we have $T(X^i) < m$. So that $T(X^n) < 2m$. Finally
+
+$$
+T(X^n) = O(\log n)
+$$
+
+(c) Suppose 
+
+$$
+X^{n-1}=\begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}
+$$
+
+then 
+
+$$
+X^n = \begin{pmatrix} 0 & 1 \\ 1 & 1 \end{pmatrix} \cdot \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix} = \begin{pmatrix} x_{21} & x_{22} \\ x_{11} + x_{21} & x_{12} + x_{22} \end{pmatrix}
+$$
+
+Because that the bits long of the value of addition of two integers at most plus 1, we have $O(n)$.
