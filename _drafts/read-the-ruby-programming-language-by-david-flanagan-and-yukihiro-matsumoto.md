@@ -9,6 +9,8 @@ tags: ruby
 
 My running Ruby version: 2.6.x.
 
+[Original example code](https://resources.oreilly.com/examples/9780596516178) | [The example code I wrote](https://github.com/alxdhuang/trpl) |
+
 {% include toc.html %}
 
 ## What is Ruby?
@@ -47,3 +49,13 @@ Comparing these code with the traditional `while` or `for` loops, it looks like 
 ```c
 for (int i = 0; i < 2; i++) printf("Ruby! ");
 ```
+
+## The Structure and Execution of Ruby Programs
+
+### Lexical Structure
+
+#### Comments
+
+Ruby has no equivalent of the C-style `/*...*/` comment. Ruby supports another style of multiline comment known as an *embedded document*.
+
+These start on a line that begins `=begin` and continue until (and include) a line that begins `=end`.
