@@ -1,8 +1,9 @@
-- title: Coding Horror
-  link: https://blog.codinghorror.com
-  description: a blog by Jeff Atwood on programming and human factors
 - title: A. Jesse Jiryu Davis
   link: https://emptysqua.re/blog/
+  description: A staff engineer at MongoDB in New York City
+- title: Coding Horror
+  link: https://blog.codinghorror.com
+  description: A blog by Jeff Atwood on programming and human factors
 - title: Gates Notes
   link: https://www.gatesnotes.com/
   description: The blog of Bill Gates
