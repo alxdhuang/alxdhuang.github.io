@@ -59,3 +59,13 @@ int fahr;
 for (fahr = 0; fahr <= 300; fahr = fahr + 20) 
     printf("%3.0f %6.1f\n", fahr, (5.0/9.0) * (fahr - 32.0));
 ```
+
+### 1.4 Symbolic Constants
+
+### 1.5 Character Input and Output
+
+> The model of input and output supported by the standard library is very simple. Text input or output, regardless of where it originates or where it goes to, is dealt with as streams of characters. A **text stream** is a sequence of characters divided into lines; each line consists of zero or more characters followed by a newline character. 
+
+#### 1.5.1 File Copying
+
+Example: [`copy.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/copy.c), a program that copies its input to its output one character at a time.
