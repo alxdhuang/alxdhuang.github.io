@@ -13,7 +13,7 @@ Here are some notes of [*The C Programming Language*, 2nd Edition](https://www.a
 
 > Most of the treatment is based on reading, writing and revising examples, rather than on mere statements of rules. For the most part, the  examples are complete, real programs, rather than isolated fragments.
 
-| [Code](https://github.com/alxdhuang/knrc) |
+| [Code](https://github.com/alxdhuang/knrc) | [Exercises](https://github.com/alxdhuang/knrc/blob/master/Exercises.md) |
 
 {% include toc.html %}
 
@@ -69,3 +69,46 @@ for (fahr = 0; fahr <= 300; fahr = fahr + 20)
 #### 1.5.1 File Copying
 
 Example: [`copy.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/copy.c), a program that copies its input to its output one character at a time.
+
+#### 1.5.2 Character Counting
+
+Example: [`cc.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/cc.c)
+
+#### 1.5.3 Line Counting
+
+Example: [`lc.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/lc.c)
+
+#### 1.5.4 Word Counting
+
+Example: [`wc.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/wc.c)
+
+### 1.6 Arrays
+
+### 1.7 Functions
+
+### 1.8 Arguments -- Call by Value
+
+### 1.9 Character Arrays
+
+Example: [`longest.c`](https://github.com/alxdhuang/knrc/blob/master/ch01/longest.c), a program to print the longest line of input.
+
+The core feature is the `get_line` function.
+
+```c
+int get_line(char s[], int lim) 
+{
+    int c, i;
+
+    for (i = 0; i < lim - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
+        s[i] = c;
+    if (c == '\n') {
+        s[i++] = c;
+    }
+    s[i] = '\0';
+    return i;
+}
+```
+
+`get_line` returns 0 as a signal for the end-of-file, since the length of a line is always greater than 0 because a line contains at least a newline character.
+
+Remember that C has not a string type so that it uses a character array which ends with a `'\0'` character to represent a character string.
