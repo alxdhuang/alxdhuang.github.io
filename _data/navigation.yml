@@ -1,14 +1,14 @@
 - name: Home
   link: /
 - name: About
-  link: /about
+  link: /about/
 - name: Search
-  link: /search.html
+  link: /search/
 - name: Categories
-  link: /categories
+  link: /categories/
 - name: Tags
-  link: /tags
+  link: /tags/
 - name: Stars
-  link: /stars
+  link: /stars/
 #- name: Staff
 #  link: /staff.html

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+permalink: /about/
 ---
 
 I am a game programmer who is working on Cocos Creator now.
