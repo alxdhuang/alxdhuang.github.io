@@ -112,3 +112,32 @@ int get_line(char s[], int lim)
 `get_line` returns 0 as a signal for the end-of-file, since the length of a line is always greater than 0 because a line contains at least a newline character.
 
 Remember that C has not a string type so that it uses a character array which ends with a `'\0'` character to represent a character string.
+
+### 1.10 External Variables and Scope
+
+## Chapter 2. Types, Operators, and Expressions
+
+### 2.1 Variable Names
+
+> At least the first 31 characters of an internal name are significant. For function names and external variables, the number may be less than 31, because external names may be used by assemblers and loaders over which the language has no control. For external names, the standard guarantees uniqueness only for 6 characters and a single case.
+
+Some discussion of this paragragh:
+
+- [(K&R) At least the first 31 characters of an internal name are significant? - Stack Overflow](https://stackoverflow.com/questions/1980939/kr-at-least-the-first-31-characters-of-an-internal-name-are-significant)
+- [Can someone explain internal/external variable names? - Stack Overflow](https://stackoverflow.com/questions/12978781/can-someone-explain-internal-external-variable-names)
+
+### 2.2 Data Types and Sizes
+
+`short` and `long` are qualifiers, but not types.
+
+Rules of sizes of integers:
+
+- `short`s and `int`s are at least 16 bits.
+- `long`s are at least 32 bits.
+- `short` is no longer than `int`, which is no longer than `long`.
+
+`unsigned` numbers(including `char`s and `int`s) are always positive or zero, and obey the laws of arithmetic modulo 2<sup>n</sup>, where n is the number of bits in the type. The standard doesn't say about `signed` numbers, it seems that it's machine-dependent. Besides, whether plain `char`s are signed or unsigned is also machine-dependent.
+
+## Appendix B. Standard Library
+
+### B11. Implementation-defined Limits: `<limits.h>` and `<float.h>`
