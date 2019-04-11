@@ -2,7 +2,7 @@
 layout: post
 title: "Annotations to Understanding ECMAScript 6"
 categories: Annotations
-tags: javascript ecmascript zakas
+tags: javascript ecmascript
 ---
 
 This post is a set of annotations to [*Understanding ECMAScript 6*](https://www.amazon.com/dp/1593277571) (2016) written by Nicholas C. Zakas.
