@@ -1,8 +1,8 @@
 ---
 title: How to Implement a Tags Archive System in Jekyll
 date: 2019-03-29 11:23:25 +0800
-modified_date: 2019-03-30 00:45:31 +0800
-categories: [Notes]
+modified_date: 2019-04-13 22:45:36 +0800
+categories: [Programming]
 tags: [jekyll, tags]
 ---
 

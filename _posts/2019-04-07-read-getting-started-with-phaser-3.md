@@ -1,9 +1,9 @@
 ---
 layout: post
 title: "Notes of Getting Started with Phaser 3"
-modified_date: 2019-04-07 23:48:25 +0800
+modified_date: 2019-04-13 22:46:08 +0800
 date: 2019-04-07 15:18:20 +0800
-categories: Notes
+categories: Programming
 tags: game phaser
 ---
 

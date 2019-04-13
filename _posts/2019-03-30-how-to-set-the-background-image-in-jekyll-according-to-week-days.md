@@ -2,7 +2,8 @@
 layout: post
 title: "How to Set The Background Image in Jekyll According to Week Days"
 date: 2019-03-30 17:22:42 +0800
-categories: Notes
+modified_date: 2019-04-13 22:45:43 +0800
+categories: Programming
 tags: jekyll javascript css
 ---
 
