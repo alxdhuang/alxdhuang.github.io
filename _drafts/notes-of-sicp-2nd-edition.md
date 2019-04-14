@@ -9,7 +9,7 @@ Notes of [*Structure and Interpretation of Computer Programs*, 2nd Edition](http
 
 {% include toc.html %}
 
-## Quotes, Summary, and Comment
+## Quotes, Summaries, and Comments
 
 ### Preface to the First Edition
 

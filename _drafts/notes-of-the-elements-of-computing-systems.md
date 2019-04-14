@@ -10,7 +10,7 @@ Notes of [*The Elements of Computing Systems*](https://www.nand2tetris.org/) by 
 
 {% include toc.html %}
 
-## Quotes, Summary, and Comment
+## Quotes, Summaries, and Comments
 
 ### Chapter 1. Boolean Logic
 
