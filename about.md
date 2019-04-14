@@ -14,7 +14,7 @@ Here is a detail explanation in my post [Why Do I Blog](/2019/03/27/why-do-i-blo
 
 ## What is the Meaning of "Temporal Dead Zone"?
 
-"Temporal Dead Zone" is a cant from the JavaScript community. It means
+"Temporal Dead Zone" is a cant from the JavaScript community.
 
 > The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone.
 > 
