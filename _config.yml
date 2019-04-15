@@ -37,4 +37,4 @@ google_analytics: true
 kramdown:
   parse_block_html: true
 
-more_posts: /tags.html
+more_posts: /tags/
