@@ -210,6 +210,17 @@ This section introduces two different ways to implement the factorial function $
   9
   ```
 
+- iterative
+
+  ```scheme
+  (+ 4 5)
+  (+ 3 6)
+  (+ 2 7)
+  (+ 1 8)
+  (+ 0 9)
+  9
+  ```
+
 ### Exercise 1.10
 
 > The following procedure computes a mathematical function called [Ackermann's function](https://en.wikipedia.org/wiki/Ackermann_function).
