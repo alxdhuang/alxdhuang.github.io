@@ -5,7 +5,7 @@ categories: Programming
 tags: python
 ---
 
-Here are some notes of [*Python Crash Course*](https://nostarch.com/pythoncrashcourse) (2015) by Eric Matthes.
+[*Python Crash Course*](https://nostarch.com/pythoncrashcourse) (2015) by Eric Matthes.
 
 {% include toc.html %}
 
@@ -21,14 +21,49 @@ A simple, maybe boring game.
 
 #### Installing Pygame
 
-##### Installing Pygame on OS X
-
-First, using [homebrew](https://brew.sh/) to install some libraries the [Pygame](https://www.pygame.org/news) depends on.
+The installing steps introduced in this book seem too complicated. According to [the official wiki](https://www.pygame.org/wiki/GettingStarted), there is only one step:
 
 ```
-brew install hg sdl sdl_image sdl_ttf sdl_mixer portmidi
+python3 -m pip install -U pygame --user
 ```
 
-- `sdl`: Low-level access to audio, keyboard, mouse, joystick and graphics.
-- `sdl_image`: Image file loading library.
+The `--user` flag means to install into the home directory rather than globally.
 
+Check it works:
+
+```
+python3 -m pygame.examples.aliens
+```
+
+#### Starting the Game
+
+`alien_invasion.py`:
+
+```python
+import sys
+import pygame
+
+def run_game():
+    pygame.init()
+    pygame.display.set_mode((1200, 800))
+    pygame.display.set_caption("Alien Invasion")
+
+    # The game loop
+    while True:
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                sys.exit()
+
+        pygame.display.flip()
+
+run_game()
+```
+
+This code fragment just creates an empty window and listens to a quit event.
+
+[`pygame.init()`](https://www.pygame.org/docs/ref/pygame.html#pygame.init) initializes all imported pygame modules. "No exceptions will be raised if a module fails, but the total number if successful and failed inits will be returned as a tuple." We can log this information,
+
+```python
+numpass, numfail = pygame.init()
+print(str(numpass) + " pass, " + str(numfail) + " fail.")
+```
