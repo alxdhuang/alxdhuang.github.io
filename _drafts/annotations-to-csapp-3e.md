@@ -36,3 +36,19 @@ The context means the algorithm of how we interpret bits.
 
 - *Understartding link-time errors.*
 - *Avoiding security holes.*
+
+### 1.4 Processors Read and Interpret Instructions Stored in Memory
+
+#### 1.4.1 Hardware Organization of a System
+
+{% include image.html name="hardware-organization.png" %}
+
+##### Buses
+
+> Buses are typically designed to transfer fixed-size chunks of bytes known as **words**.
+
+Another definition of a word size is the size of the virtual memory address (pointer). What's the relationship between these two definitions?
+
+##### I/O Devices
+
+> Each I/O device is connected to the I/O bus by either a **controller** or an **adapter**. The distinction between the two is mainly one of packaging. Controllers are chip sets in the device itself or on the system's main printed circuit board (often called the **motherboard**). An adapter is a card that plugs into a slot on the motherboard.
