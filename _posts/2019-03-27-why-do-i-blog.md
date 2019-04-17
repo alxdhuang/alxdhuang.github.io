@@ -1,7 +1,7 @@
 ---
 title: Why Do I Blog
 date: 2019-03-27 21:03:07 +0800
-categories: [FAQ]
+categories: [Notes]
 tags: [blog]
 ---
 

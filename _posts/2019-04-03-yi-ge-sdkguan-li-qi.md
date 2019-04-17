@@ -3,7 +3,7 @@ layout: post
 title: "一个SDK管理器"
 date: 2019-04-03 16:52:40 +0800
 modified_date: 2019-04-13 22:45:53 +0800
-categories: Programming
+categories: IT Notes
 tags: sdk
 ---
 

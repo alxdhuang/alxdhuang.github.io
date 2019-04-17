@@ -1,1 +1,1 @@
-python script/archive.py categories 'categories:'
+python3 script/archive.py categories 'categories:'

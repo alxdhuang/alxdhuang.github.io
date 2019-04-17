@@ -2,7 +2,7 @@
 title: Create My Own Gem-based Jekyll Theme
 date: 2019-03-28 12:26:28 +0800
 modified_date: 2019-04-13 22:45:17 +0800
-categories: [Programming]
+categories: [IT, Notes]
 tags: [jekyll, blog, ruby]
 ---
 

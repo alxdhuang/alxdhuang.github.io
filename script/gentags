@@ -1,1 +1,1 @@
-python script/archive.py tags 'tags:'
+python3 script/archive.py tags 'tags:'

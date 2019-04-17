@@ -2,7 +2,7 @@
 layout: post
 title: "用 Python 实现一个 Cocos Creator 项目打包脚本"
 date: 2019-04-15 10:57:59 +0800
-categories: Programming
+categories: IT Notes
 tags: python cocos-creator scripts
 ---
 

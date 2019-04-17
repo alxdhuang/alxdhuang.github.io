@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Annotations to A Tour of C++, 2nd Edition"
-categories: Annotations Programming
-tags: cpp
+categories: Annotations IT
+tags: cpp stroustrup
 ---
 
 [*A Tour of C++*, 2nd Edition](http://www.stroustrup.com/tour2.html) (2018) by Bjarne Stroustrup.
